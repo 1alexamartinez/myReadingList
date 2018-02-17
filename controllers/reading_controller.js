@@ -17,7 +17,8 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/books", function(req, res) {
-  book.create(["bookName", "reading"], [req.body.bookName, req.body.reading], function(result) {
+  book.create(["bookName", "reading"], [req.body.name, req.body.reading], function(result) {
+  //book.create(["bookName", "reading"], [req.body.bookName, req.body.reading], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
