@@ -1,38 +1,61 @@
-<h1>myReadingList!</h1>
+<div class="container">
 
-<h2>Books I Want to Read!</h2>
 
-<ul>
-  {{#each books}}
-    {{#unless reading}}
-      {{> books/book-block read=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="row">
+  <div class="col-md-6">
+    <div class="want">
+      <h2>Books I Want to Read!</h2>
 
-<h2>Books I have Read!</h2>
-
-<ul>
-  {{#each books}}
-    {{#if reading}}
-      {{> books/book-block read=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a book</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="bookname">Book Name:</label>
-    <input type="text" id="bookname" name="bookName">
+        <ol>
+        {{#each books}}
+        {{#unless reading}}
+        {{> books/book-block read=true}}
+        {{/unless}}
+        {{/each}}
+        </ol>
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="readi">I...</label><br>
-    <input type="radio" name="reading" value="1" checked> Have read it already!<br>
-    <input type="radio" name="reading" value="0"> Am going to read it!
+  <div class="col-md-6">
+    <div class="already">
+      <h2 id="already">Books I have Read!</h2>
+        <div class="alreadyButtons">
+          <ol>
+          {{#each books}}
+          {{#if reading}}
+          {{> books/book-block read=false}}
+          {{/if}}
+          {{/each}}
+          </ol>
+        </div>
+    </div>
+  </div>
+</div>  
+
+
+
+<div class="row">
+  <div class=" col-md-6">
+    
+      <form class="create-form">
+        <div class="form-group">
+        <h2>Add a book</h2>
+          <label for="bookname">Book Name:</label>
+          <input type="text" id="bookname" name="bookName">
+        </div>
+        <div class="form-group">
+          <label for="readi">I...</label><br>
+          <input type="radio" name="reading" value="1" checked> Have read it already!<br>
+          <input type="radio" name="reading" value="0"> Am going to read it!
+        </div>
+          <button type="submit">Add A Book</button>
+      </form>
   </div>
 
-  <button type="submit">Add A Book</button>
-</form>
+  <div class="col-md-6">
+      <h5>Possible NY TIMES BESTSELLER API COMING SOON!!</h5>
+  </div>
+
+</div>
+</div>
+</div>
