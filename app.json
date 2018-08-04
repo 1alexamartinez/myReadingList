@@ -1,7 +1,5 @@
 {
   "name": "myreadinglist",
   "description": "Reading List App",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/1alexamartinez/myReadingList.git"}
+  "repository": "git+https://github.com/1alexamartinez/myReadingList.git"
 }

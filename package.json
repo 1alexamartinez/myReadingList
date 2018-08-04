@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/1alexamartinez/myReadingList.git"
   },
+  "engines": {
+    "node":"8.7.0"
+  },
   "author": "Alexa Martinez",
   "license": "ISC",
   "bugs": {
